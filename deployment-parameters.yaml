@@ -33,3 +33,4 @@ parameters:
   OutputBucketTranscribeResults: 'transcribeResults'
   TelephonyCTRFileSuffix: '_metadata.json | _call_metadata.json'
   EntityStringMap: 'sample-entities.csv'
+  # Sync Check
