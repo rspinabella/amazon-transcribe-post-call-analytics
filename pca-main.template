@@ -59,7 +59,7 @@ Parameters:
 
   ConversationLocation:
     Type: String
-    AllowedPattern: "[+-_\/a-zA-Z0-9]*"
+    AllowedPattern: '[+-_/a-zA-Z0-9]*'
     Default: America/New_York
     Description: Name of the timezone location for the call source - this is the TZ database name from https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
