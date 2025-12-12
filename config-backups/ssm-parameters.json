@@ -1,0 +1,182 @@
+[
+    {
+        "Name": "PostCallAnalytics-BulkUploadMaxTranscribeJobs",
+        "Value": "50"
+    },
+    {
+        "Name": "PostCallAnalytics-BulkUploadStepFunctionName",
+        "Value": "PostCallAnalytics-BulkUploadWorkflow"
+    },
+    {
+        "Name": "PostCallAnalytics-ComprehendLanguages",
+        "Value": "de | en | es | it | pt | fr | ja | ko | hi | ar | zh | zh-TW"
+    },
+    {
+        "Name": "PostCallAnalytics-CustomLangModelName",
+        "Value": "undefined"
+    },
+    {
+        "Name": "PostCallAnalytics-EntityStringMap",
+        "Value": "sample-entities.csv"
+    },
+    {
+        "Name": "PostCallAnalytics-FilenameGUIDRegex",
+        "Value": "_GUID_(.*?)_"
+    },
+    {
+        "Name": "PostCallAnalytics-InputBucketFailedTranscriptions",
+        "Value": "failedAudio"
+    },
+    {
+        "Name": "PostCallAnalytics-OutputBucketParsedResults",
+        "Value": "parsedFiles"
+    },
+    {
+        "Name": "PostCallAnalytics-OutputBucketTranscribeResults",
+        "Value": "transcribeResults"
+    },
+    {
+        "Name": "PostCallAnalytics-BulkUploadBucket",
+        "Value": "postcallanalytics-bulkuploadbucket-lkgnsjicdbe3"
+    },
+    {
+        "Name": "PostCallAnalytics-CallSummarization",
+        "Value": "BEDROCK"
+    },
+    {
+        "Name": "PostCallAnalytics-DatabaseName",
+        "Value": "pcadatabase-krrjzo4wzylm"
+    },
+    {
+        "Name": "PostCallAnalytics-InputBucketAudioPlayback",
+        "Value": "playbackAudio"
+    },
+    {
+        "Name": "PostCallAnalytics-InputBucketOrigTranscripts",
+        "Value": "originalTranscripts"
+    },
+    {
+        "Name": "PostCallAnalytics-SpeakerNames",
+        "Value": "Customer | Agent"
+    },
+    {
+        "Name": "PostCallAnalytics-StepFunctionName",
+        "Value": "PostCallAnalytics-PostCallAnalyticsWorkflow"
+    },
+    {
+        "Name": "PostCallAnalytics-SupportFilesBucketName",
+        "Value": "postcallanalytics-supportfilesbucket-p61qnsgmxfoo"
+    },
+    {
+        "Name": "PostCallAnalytics-TelephonyCTRType",
+        "Value": "genesys"
+    },
+    {
+        "Name": "PostCallAnalytics-WebUiUri",
+        "Value": "https://ds3g5stdnql82.cloudfront.net/"
+    },
+    {
+        "Name": "PostCallAnalytics-ContentRedactionLanguages",
+        "Value": "en-US"
+    },
+    {
+        "Name": "PostCallAnalytics-EntityRecognizerEndpoint",
+        "Value": "undefined"
+    },
+    {
+        "Name": "PostCallAnalytics-FilenameAgentRegex",
+        "Value": "_AGENT_(.*?)_"
+    },
+    {
+        "Name": "PostCallAnalytics-FilenameCustRegex",
+        "Value": "_CUST_(.*?)_"
+    },
+    {
+        "Name": "PostCallAnalytics-KendraIndexId",
+        "Value": "b0874854-aa35-4f0d-9bf7-68d65bf5cc88"
+    },
+    {
+        "Name": "PostCallAnalytics-MinSentimentPositive",
+        "Value": "2.0"
+    },
+    {
+        "Name": "PostCallAnalytics-SpeakerSeparationType",
+        "Value": "channel"
+    },
+    {
+        "Name": "PostCallAnalytics-TranscribeLanguages",
+        "Value": "en-US | es-US | ar-AE"
+    },
+    {
+        "Name": "PostCallAnalytics-VocabFilterMode",
+        "Value": "mask"
+    },
+    {
+        "Name": "PostCallAnalytics-VocabFilterName",
+        "Value": "undefined"
+    },
+    {
+        "Name": "PostCallAnalytics-CallRedactionAudio",
+        "Value": "true"
+    },
+    {
+        "Name": "PostCallAnalytics-CallRedactionTranscript",
+        "Value": "true"
+    },
+    {
+        "Name": "PostCallAnalytics-ConversationLocation",
+        "Value": "America/Chicago"
+    },
+    {
+        "Name": "PostCallAnalytics-EntityThreshold",
+        "Value": "0.6"
+    },
+    {
+        "Name": "PostCallAnalytics-EntityTypes",
+        "Value": "PERSON | LOCATION | ORGANIZATION | COMMERCIAL_ITEM | EVENT | DATE | QUANTITY | TITLE"
+    },
+    {
+        "Name": "PostCallAnalytics-FilenameDatetimeFieldMap",
+        "Value": "%Y %m %d %H %M %S"
+    },
+    {
+        "Name": "PostCallAnalytics-FilenameDatetimeRegex",
+        "Value": "(\\d{4})-(\\d{2})-(\\d{2})T(\\d{2})-(\\d{2})-(\\d{2})"
+    },
+    {
+        "Name": "PostCallAnalytics-InputBucketName",
+        "Value": "postcallanalytics-inputbucket-zc2s4kmxh2ou"
+    },
+    {
+        "Name": "PostCallAnalytics-InputBucketRawAudio",
+        "Value": "originalAudio"
+    },
+    {
+        "Name": "PostCallAnalytics-MinSentimentNegative",
+        "Value": "2.0"
+    },
+    {
+        "Name": "PostCallAnalytics-BulkUploadMaxDripRate",
+        "Value": "25"
+    },
+    {
+        "Name": "PostCallAnalytics-MaxSpeakers",
+        "Value": "2"
+    },
+    {
+        "Name": "PostCallAnalytics-OutputBucketName",
+        "Value": "postcallanalytics-outputbucket-9sgb34ehluul"
+    },
+    {
+        "Name": "PostCallAnalytics-TelephonyCTRFileSuffix",
+        "Value": "_metadata.json | _call_metadata.json"
+    },
+    {
+        "Name": "PostCallAnalytics-TranscribeApiMode",
+        "Value": "analytics"
+    },
+    {
+        "Name": "PostCallAnalytics-VocabularyName",
+        "Value": "undefined"
+    }
+]

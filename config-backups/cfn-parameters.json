@@ -1,0 +1,250 @@
+[
+    {
+        "ParameterKey": "EntityTypes",
+        "ParameterValue": "PERSON | LOCATION | ORGANIZATION | COMMERCIAL_ITEM | EVENT | DATE | QUANTITY | TITLE"
+    },
+    {
+        "ParameterKey": "GenAIQuery",
+        "ParameterValue": "BEDROCK"
+    },
+    {
+        "ParameterKey": "SpeakerSeparationType",
+        "ParameterValue": "channel"
+    },
+    {
+        "ParameterKey": "FilenameDatetimeFieldMap",
+        "ParameterValue": "%Y %m %d %H %M %S"
+    },
+    {
+        "ParameterKey": "FilenameGUIDRegex",
+        "ParameterValue": "_GUID_(.*?)_"
+    },
+    {
+        "ParameterKey": "MinSentimentPositive",
+        "ParameterValue": "2.0"
+    },
+    {
+        "ParameterKey": "TestBedrockModelId",
+        "ParameterValue": "true"
+    },
+    {
+        "ParameterKey": "EntityRecognizerEndpoint",
+        "ParameterValue": "undefined"
+    },
+    {
+        "ParameterKey": "ConversationLocation",
+        "ParameterValue": "America/Chicago"
+    },
+    {
+        "ParameterKey": "VocabularyName",
+        "ParameterValue": "undefined"
+    },
+    {
+        "ParameterKey": "SummarizationLambdaFunctionArn",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "GlueDatabaseName",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "TelephonyCTRType",
+        "ParameterValue": "none"
+    },
+    {
+        "ParameterKey": "OutputBucketParsedResults",
+        "ParameterValue": "parsedFiles"
+    },
+    {
+        "ParameterKey": "BulkUploadMaxDripRate",
+        "ParameterValue": "25"
+    },
+    {
+        "ParameterKey": "BulkUploadMaxTranscribeJobs",
+        "ParameterValue": "50"
+    },
+    {
+        "ParameterKey": "SummarizationBedrockModelId",
+        "ParameterValue": "us.amazon.nova-pro-v1:0"
+    },
+    {
+        "ParameterKey": "StorageCapacityUnits",
+        "ParameterValue": "0"
+    },
+    {
+        "ParameterKey": "InputBucketOrigTranscripts",
+        "ParameterValue": "originalTranscripts"
+    },
+    {
+        "ParameterKey": "SpeakerNames",
+        "ParameterValue": "Customer | Agent"
+    },
+    {
+        "ParameterKey": "TelephonyCTRFileSuffix",
+        "ParameterValue": "_metadata.json | _call_metadata.json"
+    },
+    {
+        "ParameterKey": "CallRedactionAudio",
+        "ParameterValue": "true"
+    },
+    {
+        "ParameterKey": "SupportFilesBucketName",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "CustomLangModelName",
+        "ParameterValue": "undefined"
+    },
+    {
+        "ParameterKey": "AdminUsername",
+        "ParameterValue": "admin"
+    },
+    {
+        "ParameterKey": "StepFunctionName",
+        "ParameterValue": "PostCallAnalyticsWorkflow"
+    },
+    {
+        "ParameterKey": "BulkUploadBucketName",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "OutputBucketTranscribeResults",
+        "ParameterValue": "transcribeResults"
+    },
+    {
+        "ParameterKey": "InputBucketName",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "BulkUploadStepFunctionName",
+        "ParameterValue": "BulkUploadWorkflow"
+    },
+    {
+        "ParameterKey": "TranscribeApiMode",
+        "ParameterValue": "analytics"
+    },
+    {
+        "ParameterKey": "Environment",
+        "ParameterValue": "PROD"
+    },
+    {
+        "ParameterKey": "EnablePcaDashboards",
+        "ParameterValue": "Yes"
+    },
+    {
+        "ParameterKey": "OutputBucketName",
+        "ParameterValue": ""
+    },
+    {
+        "ParameterKey": "VocabFilterMode",
+        "ParameterValue": "mask"
+    },
+    {
+        "ParameterKey": "SummarizationLLMThirdPartyApiKey",
+        "ParameterValue": "****"
+    },
+    {
+        "ParameterKey": "AdminEmail",
+        "ParameterValue": "rspinabella@insurancenavy.com"
+    },
+    {
+        "ParameterKey": "SummarizationSageMakerInitialInstanceCount",
+        "ParameterValue": "1"
+    },
+    {
+        "ParameterKey": "EnableGui",
+        "ParameterValue": "true"
+    },
+    {
+        "ParameterKey": "QueryCapacityUnits",
+        "ParameterValue": "0"
+    },
+    {
+        "ParameterKey": "ContentRedactionLanguages",
+        "ParameterValue": "en-US"
+    },
+    {
+        "ParameterKey": "GenAIQueryBedrockModelId",
+        "ParameterValue": "us.amazon.nova-pro-v1:0"
+    },
+    {
+        "ParameterKey": "InputBucketRawAudio",
+        "ParameterValue": "originalAudio"
+    },
+    {
+        "ParameterKey": "FilenameDatetimeRegex",
+        "ParameterValue": "(\\d{4})-(\\d{2})-(\\d{2})T(\\d{2})-(\\d{2})-(\\d{2})"
+    },
+    {
+        "ParameterKey": "FilenameAgentRegex",
+        "ParameterValue": "_AGENT_(.*?)_"
+    },
+    {
+        "ParameterKey": "AllowedSignUpEmailDomain",
+        "ParameterValue": "insurancenavy.com"
+    },
+    {
+        "ParameterKey": "MinSentimentNegative",
+        "ParameterValue": "2.0"
+    },
+    {
+        "ParameterKey": "EntityStringMap",
+        "ParameterValue": "sample-entities.csv"
+    },
+    {
+        "ParameterKey": "ffmpegDownloadUrl",
+        "ParameterValue": "http://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-4.4-amd64-static.tar.xz"
+    },
+    {
+        "ParameterKey": "EnableTranscriptKendraSearch",
+        "ParameterValue": "Yes, create new Kendra Index (Developer Edition)"
+    },
+    {
+        "ParameterKey": "TranscribeLanguages",
+        "ParameterValue": "en-US | es-US | ar-AE"
+    },
+    {
+        "ParameterKey": "VocabFilterName",
+        "ParameterValue": "undefined"
+    },
+    {
+        "ParameterKey": "RetentionDays",
+        "ParameterValue": "365"
+    },
+    {
+        "ParameterKey": "ComprehendLanguages",
+        "ParameterValue": "de | en | es | it | pt | fr | ja | ko | hi | ar | zh | zh-TW"
+    },
+    {
+        "ParameterKey": "CallRedactionTranscript",
+        "ParameterValue": "true"
+    },
+    {
+        "ParameterKey": "MaxSpeakers",
+        "ParameterValue": "2"
+    },
+    {
+        "ParameterKey": "InputBucketAudioPlayback",
+        "ParameterValue": "playbackAudio"
+    },
+    {
+        "ParameterKey": "CallSummarization",
+        "ParameterValue": "BEDROCK"
+    },
+    {
+        "ParameterKey": "loadSampleAudioFiles",
+        "ParameterValue": "true"
+    },
+    {
+        "ParameterKey": "EntityThreshold",
+        "ParameterValue": "0.6"
+    },
+    {
+        "ParameterKey": "InputBucketFailedTranscriptions",
+        "ParameterValue": "failedAudio"
+    },
+    {
+        "ParameterKey": "FilenameCustRegex",
+        "ParameterValue": "_CUST_(.*?)_"
+    }
+]
