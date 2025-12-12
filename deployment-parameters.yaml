@@ -1,35 +1,68 @@
 template-file-path: pca-main.template
 parameters:
-  #--- Core Configuration ---
-  AdminEmail: 'rspinabella@insurancenavy.com'
-  AdminUsername: 'admin'
-  Environment: 'PROD'
-  
-  #--- Features Enabled ---
-  CallSummarization: 'BEDROCK'
-  GenAIQuery: 'BEDROCK'
+  EntityTypes: >-
+    PERSON | LOCATION | ORGANIZATION | COMMERCIAL_ITEM | EVENT | DATE | QUANTITY
+    | TITLE
+  GenAIQuery: BEDROCK
+  SpeakerSeparationType: channel
+  FilenameDatetimeFieldMap: '%Y %m %d %H %M %S'
+  FilenameGUIDRegex: _GUID_(.*?)_
+  MinSentimentPositive: '2.0'
+  TestBedrockModelId: 'true'
+  EntityRecognizerEndpoint: undefined
+  ConversationLocation: America/Chicago
+  VocabularyName: undefined
+  SummarizationLambdaFunctionArn: ''
+  GlueDatabaseName: ''
+  TelephonyCTRType: none
+  OutputBucketParsedResults: parsedFiles
+  BulkUploadMaxDripRate: '25'
+  BulkUploadMaxTranscribeJobs: '50'
+  SummarizationBedrockModelId: us.amazon.nova-pro-v1:0
+  StorageCapacityUnits: '0'
+  InputBucketOrigTranscripts: originalTranscripts
+  SpeakerNames: Customer | Agent
+  TelephonyCTRFileSuffix: _metadata.json | _call_metadata.json
+  CallRedactionAudio: 'true'
+  SupportFilesBucketName: ''
+  CustomLangModelName: undefined
+  AdminUsername: admin
+  StepFunctionName: PostCallAnalyticsWorkflow
+  BulkUploadBucketName: ''
+  OutputBucketTranscribeResults: transcribeResults
+  InputBucketName: ''
+  BulkUploadStepFunctionName: BulkUploadWorkflow
+  TranscribeApiMode: analytics
+  Environment: PROD
   EnablePcaDashboards: 'Yes'
-  EnableGui: 'true'
-  EnableTranscriptKendraSearch: 'Yes, create new Kendra Index (Developer Edition)'
-  loadSampleAudioFiles: 'true'
-
-  #--- Custom Settings ---
-  ConversationLocation: 'America/Chicago'
-  AllowedSignUpEmailDomain: 'insurancenavy.com'
-  TranscribeLanguages: 'en-US | es-US | ar-AE'
-  SpeakerSeparationType: 'channel'
-  
-  #--- Bedrock / LLM ---
-  SummarizationBedrockModelId: 'us.amazon.nova-pro-v1:0'
-  GenAIQueryBedrockModelId: 'us.amazon.nova-pro-v1:0'
+  OutputBucketName: ''
+  VocabFilterMode: mask
   SummarizationLLMThirdPartyApiKey: '****'
-
-  #--- Buckets & storage (Keeping these implicit/defaults is usually safer, but defining explicitly as requested) ---
-  InputBucketRawAudio: 'originalAudio'
-  InputBucketOrigTranscripts: 'originalTranscripts'
-  InputBucketAudioPlayback: 'playbackAudio'
-  InputBucketFailedTranscriptions: 'failedAudio'
-  OutputBucketParsedResults: 'parsedFiles'
-  OutputBucketTranscribeResults: 'transcribeResults'
-  TelephonyCTRFileSuffix: '_metadata.json | _call_metadata.json'
-  EntityStringMap: 'sample-entities.csv'
+  AdminEmail: rspinabella@insurancenavy.com
+  SummarizationSageMakerInitialInstanceCount: '1'
+  EnableGui: 'true'
+  QueryCapacityUnits: '0'
+  ContentRedactionLanguages: en-US
+  GenAIQueryBedrockModelId: us.amazon.nova-pro-v1:0
+  InputBucketRawAudio: originalAudio
+  FilenameDatetimeRegex: (\d{4})-(\d{2})-(\d{2})T(\d{2})-(\d{2})-(\d{2})
+  FilenameAgentRegex: _AGENT_(.*?)_
+  AllowedSignUpEmailDomain: insurancenavy.com
+  MinSentimentNegative: '2.0'
+  EntityStringMap: sample-entities.csv
+  ffmpegDownloadUrl: >-
+    http://www.johnvansickle.com/ffmpeg/old-releases/ffmpeg-4.4-amd64-static.tar.xz
+  EnableTranscriptKendraSearch: Yes, create new Kendra Index (Developer Edition)
+  TranscribeLanguages: en-US | es-US | ar-AE
+  VocabFilterName: undefined
+  RetentionDays: '365'
+  ComprehendLanguages: de | en | es | it | pt | fr | ja | ko | hi | ar | zh | zh-TW
+  CallRedactionTranscript: 'true'
+  MaxSpeakers: '2'
+  InputBucketAudioPlayback: playbackAudio
+  CallSummarization: BEDROCK
+  loadSampleAudioFiles: 'true'
+  EntityThreshold: '0.6'
+  InputBucketFailedTranscriptions: failedAudio
+  FilenameCustRegex: _CUST_(.*?)_
+tags: {}
