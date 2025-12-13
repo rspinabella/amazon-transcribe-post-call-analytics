@@ -1155,7 +1155,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Condition: ShouldEnableKendraSearch
     Properties:
-      TemplateURL: build/pca-mediasearch-finder.yaml
+      TemplateURL: cfn-templates/pca-mediasearch-finder.yaml
       Parameters:
         AdminEmail: !Ref AdminEmail
         KendraIndexId: !Ref KendraIndex
@@ -1170,7 +1170,7 @@ Resources:
     Condition: ShouldDeployPcaDashboards
     DependsOn: PCAServer
     Properties:
-      TemplateURL: build/pca-dashboards.yaml
+      TemplateURL: cfn-templates/pca-dashboards.yaml
       Parameters:
         PcaGlueCatalogDatabaseName: !Ref PCADatabase
         PcaOutputBucket: 
