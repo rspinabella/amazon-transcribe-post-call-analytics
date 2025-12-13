@@ -996,7 +996,7 @@ Resources:
   LLMPromptConfigure:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: pca-server/cfn/lib/llm.template
+      TemplateURL: cfn-templates/pca-server/cfn/lib/llm.template
 
   ########################################################
   # SSM Stack
@@ -1005,7 +1005,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     DependsOn: LLMPromptConfigure
     Properties:
-      TemplateURL: pca-ssm/cfn/ssm.template
+      TemplateURL: cfn-templates/pca-ssm/cfn/ssm.template
       Parameters:
         StackName: !Ref 'AWS::StackName'
         BulkUploadBucketName:
@@ -1099,7 +1099,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     DependsOn: SSM
     Properties:
-      TemplateURL: pca-server/cfn/pca-server.template
+      TemplateURL: cfn-templates/pca-server/cfn/pca-server.template
       Parameters:
         DatabaseName: !Ref PCADatabase
         ParentStackName: !Ref 'AWS::StackName'
@@ -1119,7 +1119,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Condition: ShouldEnableGui
     Properties:
-      TemplateURL: pca-ui/cfn/pca-ui.template
+      TemplateURL: cfn-templates/pca-ui/cfn/pca-ui.template
       Parameters:
         ParentStackName: !Ref 'AWS::StackName'
         AdminUsername: !Ref AdminUsername
