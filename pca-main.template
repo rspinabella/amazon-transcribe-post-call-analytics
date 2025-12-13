@@ -996,7 +996,7 @@ Resources:
   LLMPromptConfigure:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://raw.githubusercontent.com/rspinabella/amazon-transcribe-post-call-analytics/in-custom/pca-server/cfn/lib/llm.template
+      TemplateURL: pca-server/cfn/lib/llm.template
 
   ########################################################
   # SSM Stack
@@ -1005,7 +1005,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     DependsOn: LLMPromptConfigure
     Properties:
-      TemplateURL: https://raw.githubusercontent.com/rspinabella/amazon-transcribe-post-call-analytics/in-custom/pca-ssm/cfn/ssm.template
+      TemplateURL: pca-ssm/cfn/ssm.template
       Parameters:
         StackName: !Ref 'AWS::StackName'
         BulkUploadBucketName:
@@ -1078,7 +1078,7 @@ Resources:
     DependsOn: SSM
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: https://raw.githubusercontent.com/rspinabella/amazon-transcribe-post-call-analytics/in-custom/pca-server/cfn/lib/python-utilities.template
+      TemplateURL: pca-server/cfn/lib/python-utilities.template
       Parameters:
         ParentStackName: !Ref 'AWS::StackName'
 
@@ -1099,7 +1099,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     DependsOn: SSM
     Properties:
-      TemplateURL: https://raw.githubusercontent.com/rspinabella/amazon-transcribe-post-call-analytics/in-custom/pca-server/cfn/pca-server.template
+      TemplateURL: pca-server/cfn/pca-server.template
       Parameters:
         DatabaseName: !Ref PCADatabase
         ParentStackName: !Ref 'AWS::StackName'
@@ -1119,7 +1119,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Condition: ShouldEnableGui
     Properties:
-      TemplateURL: https://raw.githubusercontent.com/rspinabella/amazon-transcribe-post-call-analytics/in-custom/pca-ui/cfn/pca-ui.template
+      TemplateURL: pca-ui/cfn/pca-ui.template
       Parameters:
         ParentStackName: !Ref 'AWS::StackName'
         AdminUsername: !Ref AdminUsername
@@ -1155,7 +1155,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Condition: ShouldEnableKendraSearch
     Properties:
-      TemplateURL: https://raw.githubusercontent.com/rspinabella/amazon-transcribe-post-call-analytics/in-custom/build/pca-mediasearch-finder.yaml
+      TemplateURL: build/pca-mediasearch-finder.yaml
       Parameters:
         AdminEmail: !Ref AdminEmail
         KendraIndexId: !Ref KendraIndex
@@ -1170,7 +1170,7 @@ Resources:
     Condition: ShouldDeployPcaDashboards
     DependsOn: PCAServer
     Properties:
-      TemplateURL: https://raw.githubusercontent.com/rspinabella/amazon-transcribe-post-call-analytics/in-custom/build/pca-dashboards.yaml
+      TemplateURL: build/pca-dashboards.yaml
       Parameters:
         PcaGlueCatalogDatabaseName: !Ref PCADatabase
         PcaOutputBucket: 
@@ -1188,7 +1188,7 @@ Resources:
     Type: AWS::CloudFormation::Stack
     Condition: ShouldLoadSampleFiles
     Properties:
-      TemplateURL: https://raw.githubusercontent.com/rspinabella/amazon-transcribe-post-call-analytics/in-custom/pca-samples/copy-samples.template
+      TemplateURL: pca-samples/copy-samples.template
       Parameters:
         ParentStackName: !Ref 'AWS::StackName'
         DependsOnPCAServer: !Ref PCAServer
