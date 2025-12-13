@@ -996,7 +996,7 @@ Resources:
   LLMPromptConfigure:
     Type: AWS::CloudFormation::Stack
     Properties:
-      TemplateURL: cfn-templates/llm.template
+      TemplateURL: cfn-templates/llm.yaml
 
   ########################################################
   # SSM Stack
